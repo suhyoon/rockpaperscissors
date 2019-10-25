@@ -8,19 +8,19 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
-var userChoice;
-var computerChoice;
-var winner; 
+let userChoice;
+let computerChoice;
+let winner;
 $("#shoot").click(function(){
-     var userChoice= $("#input").val();
+     let userChoice= $("#input").val();
      computerChoice=Math.random();
      $("#userChoice").text(userChoice);
 
-     
+
     console.log(computerChoice);
      if(computerChoice <0.999 && computerChoice>0.666) {
          computerChoice="rock"
-        $("#computerChoice").text("ROCK"); 
+        $("#computerChoice").text("ROCK");
      }else if(computerChoice<.666 && computerChoice>0.333){
         $("#computerChoice").text("SCISSORS");
          computerChoice="scissors"
@@ -29,7 +29,7 @@ $("#shoot").click(function(){
          computerChoice="paper"
     }
 
-    if(userChoice===computerChoice){ 
+    if(userChoice===computerChoice){
         winner = "TIE";
         $("#result").text(winner);
     }else if(userChoice==="scissors" && computerChoice==="rock"){
@@ -41,14 +41,13 @@ $("#shoot").click(function(){
     }else if(userChoice==="rock" && computerChoice==="scissors"){
         $("#result").text("YOU WIN");
     }else if(userChoice==="scissors" && computerChoice==="paper"){
-        $("#result").text("YOU WIN"); 
+        $("#result").text("YOU WIN");
     }else if(userChoice==="paper" && computerChoice==="rock"){
         $("#result").text("YOU WIN");
     }else if(userChoice==="scissors" && computerChoice==="paper"){
-        $("#result").text("YOU WIN"); 
-        
+        $("#result").text("YOU WIN");
+
     }
-    }); 
-    
-    console.log("#result"); 
-    
+    });
+
+    console.log("#result");
